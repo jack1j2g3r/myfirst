@@ -1,21 +1,27 @@
-//导入Vue-router模块
-import Vue from "vue";
-import VueRouter from "vue-router";
+//导入 Vue模块
+import Vue from 'vue';
+
+//导入 vue-router 路由模块
+import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
-//导入login.vue组件
-import login from "./components/login.vue";
+//引入 首页/会员/购物车/搜索组件
+import home from './components/home.vue';
+import member from './components/member.vue';
+import shopcar from './components/shopcar.vue';
+import search from './components/search.vue';
 
-//导入register.vue组件
-import register from "./components/register.vue";
-
-//创建Vue-router实例对象
+//实例化路由对象
 var router = new VueRouter({
     routes: [
-        {path:'/login', component:login},
-        {path:'/register', component:register}
-    ]
+        {path: '/', redirect: '/home'},
+        {path:'/home', component: home},
+        {path:'/member', component: member},
+        {path:'/shopcar', component: shopcar},
+        {path:'/search', component: search}
+    ],
+    linkActiveClass: 'mui-active' //覆盖默认的路由高亮类 router-link-active 为 mui-active
 });
 
-//输出 router 对象
+//输出路由对象
 export default router;
