@@ -4,7 +4,7 @@
         <mt-header fixed title="易购商城"></mt-header>
         
         <!-- 中间的 路由 router-view 区域 -->
-		<router-view></router-view>
+		<router-view class="router_view"></router-view>
 
         <!-- 底部 Tabbar 区域 -->
         <nav class="mui-bar mui-bar-tab">
@@ -34,6 +34,16 @@
 
 <style lang="scss" scoped>
 	.app-container{
-		margin-top: 40px;
+		// margin-top: 40px;
+		// padding-bottom: 40px;
+		.mint-header{
+			    background-color: red;
+				font-weight: bold;
+		}
+		.router_view{
+			margin-top: 40px;
+			margin-bottom: 50px;
+			// border: 2px solid black;
+		}
 	}
 </style>
